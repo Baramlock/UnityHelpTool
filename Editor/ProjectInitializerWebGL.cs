@@ -1,9 +1,8 @@
 ﻿using UnityEditor;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace Scenes
+namespace HelpTool.Editor
 {
     public static class ProjectInitializerWebGL
     {

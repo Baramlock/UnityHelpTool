@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HelpTool.CustomAttribute
+namespace HelpTool.RunTime.CustomAttribute
 {
     [System.AttributeUsage(System.AttributeTargets.Field | System.AttributeTargets.Property, AllowMultiple = true)]
     public sealed class MaxAttribute : PropertyAttribute

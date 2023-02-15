@@ -1,8 +1,8 @@
-﻿using HelpTool.CustomAttribute;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
+using MaxAttribute = HelpTool.RunTime.CustomAttribute.MaxAttribute;
 
-namespace HelpTool.CustomAttributeDrawer
+namespace HelpTool.Editor.CustomAttributeDrawer
 {
     [CustomPropertyDrawer(typeof(MaxAttribute))]
     public sealed class MaxAttributePropertyDrawer : PropertyDrawer

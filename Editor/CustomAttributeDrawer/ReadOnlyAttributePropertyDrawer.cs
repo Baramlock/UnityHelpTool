@@ -1,8 +1,8 @@
-﻿using HelpTool.CustomAttribute;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
+using ReadOnlyAttribute = HelpTool.RunTime.CustomAttribute.ReadOnlyAttribute;
 
-namespace HelpTool.CustomAttributeDrawer
+namespace HelpTool.Editor.CustomAttributeDrawer
 {
     [CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
     public sealed class ReadOnlyAttributePropertyDrawer : PropertyDrawer
