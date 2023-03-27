@@ -2,14 +2,14 @@
 
 namespace HelpTool.RunTime.CustomAttribute.Conditional
 {
-    public class ShowEnumAttribute : PropertyAttribute
+    public class ShowIfEnumAttribute : PropertyAttribute
     {
         public readonly string EnumName;
-        public readonly int EnumValue;
+        public readonly int ComparableEnumValue;
 
-        public ShowEnumAttribute(string enumName, int enumValue)
+        public ShowIfEnumAttribute(string enumName, int comparableEnumValue)
         {
-            EnumValue = enumValue;
+            ComparableEnumValue = comparableEnumValue;
             EnumName = enumName;
         }
     }

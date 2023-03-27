@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace HelpTool.Editor.CustomAttributeDrawer.ConditionalAttributeDrawer
 {
-    [CustomPropertyDrawer(typeof(ShowEnumAttribute))]
+    [CustomPropertyDrawer(typeof(ShowIfEnumAttribute))]
     public class ConditionalEnumDrawer : PropertyDrawer
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
@@ -34,12 +34,12 @@ namespace HelpTool.Editor.CustomAttributeDrawer.ConditionalAttributeDrawer
 
         private SerializedProperty FindProperty(SerializedProperty property)
         {
-            return property.serializedObject.FindProperty(((ShowEnumAttribute) attribute).EnumName);
+            return property.serializedObject.FindProperty(((ShowIfEnumAttribute) attribute).EnumName);
         }
 
         private bool CanHidden(SerializedProperty boolProperty)
         {
-            return boolProperty.enumValueIndex != ((ShowEnumAttribute) attribute).EnumValue;
+            return boolProperty.enumValueIndex != ((ShowIfEnumAttribute) attribute).ComparableEnumValue;
         }
     }
 }
