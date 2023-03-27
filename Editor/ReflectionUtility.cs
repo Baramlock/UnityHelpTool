@@ -12,7 +12,7 @@ namespace HelpTool.Editor
             if (target == false)
                 yield break;
 
-            var methodInfos = target.GetType()
+            MethodInfo[] methodInfos = target.GetType()
                 .GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic|  BindingFlags.DeclaredOnly);
 
             foreach (MethodInfo info in methodInfos)
